@@ -188,7 +188,7 @@ public class FrLogin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 330, 360));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 350, 360));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 

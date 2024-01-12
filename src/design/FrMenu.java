@@ -4,7 +4,9 @@
  */
 package design;
 
+import design.view.MasterAddOrders;
 import design.view.MasterDashboard;
+import design.view.MasterMembership;
 import design.view.MasterOrders;
 
 import java.awt.Color;
@@ -53,18 +55,18 @@ public class FrMenu extends javax.swing.JFrame {
         pn_linedashboard = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         btdashboard = new javax.swing.JLabel();
-        pn_Clients = new javax.swing.JPanel();
-        pn_lineclient = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        btCllient = new javax.swing.JLabel();
         pn_Orders = new javax.swing.JPanel();
         pn_lineorders = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         btOrders = new javax.swing.JLabel();
-        pn_Finance = new javax.swing.JPanel();
-        pn_linefinance = new javax.swing.JPanel();
+        pn_OrdersInfo = new javax.swing.JPanel();
+        pn_lineordersinfo = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        btFinance = new javax.swing.JLabel();
+        btOrdersInfo = new javax.swing.JLabel();
+        pn_Membership = new javax.swing.JPanel();
+        pn_linefinance1 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        btFinance1 = new javax.swing.JLabel();
         pn_kanan = new javax.swing.JPanel();
         pn_atas = new javax.swing.JPanel();
         pn_utama = new javax.swing.JPanel();
@@ -98,7 +100,7 @@ public class FrMenu extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/assets/icons8_dashboard_30px.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/assets/icons8_compass_30px.png"))); // NOI18N
 
         btdashboard.setBackground(new java.awt.Color(102, 102, 102));
         btdashboard.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
@@ -140,68 +142,6 @@ public class FrMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pn_Clients.setBackground(new java.awt.Color(0, 102, 255));
-        pn_Clients.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pn_ClientsMouseEntered(evt);
-            }
-        });
-
-        pn_lineclient.setBackground(new java.awt.Color(0, 102, 255));
-
-        javax.swing.GroupLayout pn_lineclientLayout = new javax.swing.GroupLayout(pn_lineclient);
-        pn_lineclient.setLayout(pn_lineclientLayout);
-        pn_lineclientLayout.setHorizontalGroup(
-            pn_lineclientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 15, Short.MAX_VALUE)
-        );
-        pn_lineclientLayout.setVerticalGroup(
-            pn_lineclientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/assets/icons8_user_male_circle_30px.png"))); // NOI18N
-
-        btCllient.setBackground(new java.awt.Color(102, 102, 102));
-        btCllient.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
-        btCllient.setForeground(new java.awt.Color(255, 255, 255));
-        btCllient.setText("Clients");
-        btCllient.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btCllientMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btCllientMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btCllientMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pn_ClientsLayout = new javax.swing.GroupLayout(pn_Clients);
-        pn_Clients.setLayout(pn_ClientsLayout);
-        pn_ClientsLayout.setHorizontalGroup(
-            pn_ClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_ClientsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pn_lineclient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btCllient, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pn_ClientsLayout.setVerticalGroup(
-            pn_ClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_ClientsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pn_ClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                    .addComponent(pn_lineclient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btCllient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
         pn_Orders.setBackground(new java.awt.Color(0, 102, 255));
         pn_Orders.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -222,12 +162,17 @@ public class FrMenu extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/assets/icons8_purchase_order_30px.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/assets/icons8_add_rule_30px.png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         btOrders.setBackground(new java.awt.Color(102, 102, 102));
         btOrders.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         btOrders.setForeground(new java.awt.Color(255, 255, 255));
-        btOrders.setText("Orders");
+        btOrders.setText("Add Orders");
         btOrders.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btOrdersMouseClicked(evt);
@@ -251,7 +196,7 @@ public class FrMenu extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pn_OrdersLayout.setVerticalGroup(
             pn_OrdersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,62 +209,125 @@ public class FrMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pn_Finance.setBackground(new java.awt.Color(0, 102, 255));
-        pn_Finance.addMouseListener(new java.awt.event.MouseAdapter() {
+        pn_OrdersInfo.setBackground(new java.awt.Color(0, 102, 255));
+        pn_OrdersInfo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pn_FinanceMouseEntered(evt);
+                pn_OrdersInfoMouseEntered(evt);
             }
         });
 
-        pn_linefinance.setBackground(new java.awt.Color(0, 102, 255));
+        pn_lineordersinfo.setBackground(new java.awt.Color(0, 102, 255));
 
-        javax.swing.GroupLayout pn_linefinanceLayout = new javax.swing.GroupLayout(pn_linefinance);
-        pn_linefinance.setLayout(pn_linefinanceLayout);
-        pn_linefinanceLayout.setHorizontalGroup(
-            pn_linefinanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 15, Short.MAX_VALUE)
-        );
-        pn_linefinanceLayout.setVerticalGroup(
-            pn_linefinanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/assets/icons8_purchase_order_30px_2.png"))); // NOI18N
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/assets/icons8_finance_document__30px.png"))); // NOI18N
-
-        btFinance.setBackground(new java.awt.Color(102, 102, 102));
-        btFinance.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
-        btFinance.setForeground(new java.awt.Color(255, 255, 255));
-        btFinance.setText("Finance");
-        btFinance.addMouseListener(new java.awt.event.MouseAdapter() {
+        btOrdersInfo.setBackground(new java.awt.Color(102, 102, 102));
+        btOrdersInfo.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
+        btOrdersInfo.setForeground(new java.awt.Color(255, 255, 255));
+        btOrdersInfo.setText("Orders Info");
+        btOrdersInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btOrdersInfoMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btFinanceMouseEntered(evt);
+                btOrdersInfoMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btFinanceMouseExited(evt);
+                btOrdersInfoMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout pn_FinanceLayout = new javax.swing.GroupLayout(pn_Finance);
-        pn_Finance.setLayout(pn_FinanceLayout);
-        pn_FinanceLayout.setHorizontalGroup(
-            pn_FinanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_FinanceLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pn_linefinance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        javax.swing.GroupLayout pn_lineordersinfoLayout = new javax.swing.GroupLayout(pn_lineordersinfo);
+        pn_lineordersinfo.setLayout(pn_lineordersinfoLayout);
+        pn_lineordersinfoLayout.setHorizontalGroup(
+            pn_lineordersinfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_lineordersinfoLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btOrdersInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        pn_lineordersinfoLayout.setVerticalGroup(
+            pn_lineordersinfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+            .addComponent(btOrdersInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout pn_OrdersInfoLayout = new javax.swing.GroupLayout(pn_OrdersInfo);
+        pn_OrdersInfo.setLayout(pn_OrdersInfoLayout);
+        pn_OrdersInfoLayout.setHorizontalGroup(
+            pn_OrdersInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_OrdersInfoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pn_lineordersinfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        pn_FinanceLayout.setVerticalGroup(
-            pn_FinanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_FinanceLayout.createSequentialGroup()
+        pn_OrdersInfoLayout.setVerticalGroup(
+            pn_OrdersInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_OrdersInfoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pn_FinanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pn_linefinance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btFinance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pn_lineordersinfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        pn_Membership.setBackground(new java.awt.Color(0, 102, 255));
+        pn_Membership.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pn_MembershipMouseEntered(evt);
+            }
+        });
+
+        pn_linefinance1.setBackground(new java.awt.Color(0, 102, 255));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/assets/icons8_membership_card_filled_30px_1.png"))); // NOI18N
+
+        btFinance1.setBackground(new java.awt.Color(102, 102, 102));
+        btFinance1.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
+        btFinance1.setForeground(new java.awt.Color(255, 255, 255));
+        btFinance1.setText("Membership");
+        btFinance1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btFinance1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btFinance1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btFinance1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pn_linefinance1Layout = new javax.swing.GroupLayout(pn_linefinance1);
+        pn_linefinance1.setLayout(pn_linefinance1Layout);
+        pn_linefinance1Layout.setHorizontalGroup(
+            pn_linefinance1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_linefinance1Layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btFinance1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        pn_linefinance1Layout.setVerticalGroup(
+            pn_linefinance1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btFinance1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout pn_MembershipLayout = new javax.swing.GroupLayout(pn_Membership);
+        pn_Membership.setLayout(pn_MembershipLayout);
+        pn_MembershipLayout.setHorizontalGroup(
+            pn_MembershipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_MembershipLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pn_linefinance1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pn_MembershipLayout.setVerticalGroup(
+            pn_MembershipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_MembershipLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pn_linefinance1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -328,16 +336,19 @@ public class FrMenu extends javax.swing.JFrame {
         pn_kiriLayout.setHorizontalGroup(
             pn_kiriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_kiriLayout.createSequentialGroup()
-                .addGroup(pn_kiriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pn_dashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pn_Clients, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pn_dashboard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(pn_Orders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pn_kiriLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(pn_Finance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_kiriLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pn_kiriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pn_OrdersInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pn_Membership, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         pn_kiriLayout.setVerticalGroup(
             pn_kiriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,13 +357,13 @@ public class FrMenu extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(29, 29, 29)
                 .addComponent(pn_dashboard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(pn_Clients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pn_Orders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(pn_Finance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(470, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pn_OrdersInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pn_Membership, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(452, Short.MAX_VALUE))
         );
 
         getContentPane().add(pn_kiri, java.awt.BorderLayout.LINE_START);
@@ -416,26 +427,6 @@ public class FrMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btdashboardMouseExited
 
-    private void btCllientMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btCllientMouseEntered
-        // Untuk mengubah warna pn_dashboard menjadi orange
-        pn_Clients.setBackground(new Color(255, 165, 0)); // Warna orange
-
-        // Untuk mengubah warna pn_line menjadi putih
-        pn_lineclient.setBackground(Color.WHITE);
-    }//GEN-LAST:event_btCllientMouseEntered
-
-    private void btCllientMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btCllientMouseExited
-        // Mengubah warna pn_dashboard menjadi biru (0, 102, 255)
-        pn_Clients.setBackground(new Color(0, 102, 255));
-
-        // Mengubah warna pn_line menjadi biru (0, 102, 255)
-        pn_lineclient.setBackground(new Color(0, 102, 255));
-    }//GEN-LAST:event_btCllientMouseExited
-
-    private void pn_ClientsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pn_ClientsMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pn_ClientsMouseEntered
-
     private void btOrdersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btOrdersMouseEntered
         // Untuk mengubah warna pn_dashboard menjadi orange
         pn_Orders.setBackground(new Color(255, 165, 0)); // Warna orange
@@ -456,25 +447,25 @@ public class FrMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pn_OrdersMouseEntered
 
-    private void btFinanceMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btFinanceMouseEntered
+    private void btOrdersInfoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btOrdersInfoMouseEntered
         // Untuk mengubah warna pn_dashboard menjadi orange
-        pn_Finance.setBackground(new Color(255, 165, 0)); // Warna orange
+        pn_OrdersInfo.setBackground(new Color(255, 165, 0)); // Warna orange
 
         // Untuk mengubah warna pn_line menjadi putih
-        pn_linefinance.setBackground(Color.WHITE);
-    }//GEN-LAST:event_btFinanceMouseEntered
+        pn_lineordersinfo.setBackground(Color.WHITE);
+    }//GEN-LAST:event_btOrdersInfoMouseEntered
 
-    private void btFinanceMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btFinanceMouseExited
+    private void btOrdersInfoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btOrdersInfoMouseExited
         // Mengubah warna pn_dashboard menjadi biru (0, 102, 255)
-        pn_Finance.setBackground(new Color(0, 102, 255));
+        pn_OrdersInfo.setBackground(new Color(0, 102, 255));
 
         // Mengubah warna pn_line menjadi biru (0, 102, 255)
-        pn_linefinance.setBackground(new Color(0, 102, 255));
-    }//GEN-LAST:event_btFinanceMouseExited
+        pn_lineordersinfo.setBackground(new Color(0, 102, 255));
+    }//GEN-LAST:event_btOrdersInfoMouseExited
 
-    private void pn_FinanceMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pn_FinanceMouseEntered
+    private void pn_OrdersInfoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pn_OrdersInfoMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_pn_FinanceMouseEntered
+    }//GEN-LAST:event_pn_OrdersInfoMouseEntered
 
     private void btdashboardMouseClicked(MouseEvent evt) {//GEN-FIRST:event_btdashboardMouseClicked
         pn_utama.setVisible(true);
@@ -486,23 +477,53 @@ public class FrMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btdashboardMouseClicked
 
-    private void btCllientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btCllientMouseClicked
+    private void btOrdersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btOrdersMouseClicked
         pn_utama.setVisible(true);
         pn_utama.removeAll();
-        pn_utama.add(new MasterDashboard());
+        pn_utama.add(new MasterAddOrders());
         pn_utama.setBackground(Color.white);
         pn_utama.repaint();
         pn_utama.revalidate();
-    }//GEN-LAST:event_btCllientMouseClicked
+    }//GEN-LAST:event_btOrdersMouseClicked
 
-    private void btOrdersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btOrdersMouseClicked
+    private void btFinance1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btFinance1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btFinance1MouseEntered
+
+    private void btFinance1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btFinance1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btFinance1MouseExited
+
+    private void pn_MembershipMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pn_MembershipMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pn_MembershipMouseEntered
+
+    private void btOrdersInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btOrdersInfoMouseClicked
         pn_utama.setVisible(true);
         pn_utama.removeAll();
         pn_utama.add(new MasterOrders());
         pn_utama.setBackground(Color.white);
         pn_utama.repaint();
         pn_utama.revalidate();
-    }//GEN-LAST:event_btOrdersMouseClicked
+    }//GEN-LAST:event_btOrdersInfoMouseClicked
+
+    private void btFinance1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btFinance1MouseClicked
+        pn_utama.setVisible(true);
+        pn_utama.removeAll();
+        pn_utama.add(new MasterMembership());
+        pn_utama.setBackground(Color.white);
+        pn_utama.repaint();
+        pn_utama.revalidate();
+    }//GEN-LAST:event_btFinance1MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        pn_utama.setVisible(true);
+        pn_utama.removeAll();
+        pn_utama.add(new MasterAddOrders());
+        pn_utama.setBackground(Color.white);
+        pn_utama.repaint();
+        pn_utama.revalidate();
+    }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -543,26 +564,26 @@ public class FrMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel btCllient;
-    private javax.swing.JLabel btFinance;
+    private javax.swing.JLabel btFinance1;
     private javax.swing.JLabel btOrders;
+    private javax.swing.JLabel btOrdersInfo;
     private javax.swing.JLabel btdashboard;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel pn_Clients;
-    private javax.swing.JPanel pn_Finance;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel pn_Membership;
     private javax.swing.JPanel pn_Orders;
+    private javax.swing.JPanel pn_OrdersInfo;
     private javax.swing.JPanel pn_atas;
     private javax.swing.JPanel pn_dashboard;
     private javax.swing.JPanel pn_kanan;
     private javax.swing.JPanel pn_kiri;
-    private javax.swing.JPanel pn_lineclient;
     private javax.swing.JPanel pn_linedashboard;
-    private javax.swing.JPanel pn_linefinance;
+    private javax.swing.JPanel pn_linefinance1;
     private javax.swing.JPanel pn_lineorders;
+    private javax.swing.JPanel pn_lineordersinfo;
     private javax.swing.JPanel pn_utama;
     // End of variables declaration//GEN-END:variables
 }
